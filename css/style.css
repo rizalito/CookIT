@@ -513,12 +513,33 @@ h2 {
   color: var(--muted);
   font-size: 14px;
 }
+.auth-field {
+  display: grid;
+  gap: 5px;
+}
+.password-field {
+  position: relative;
+}
 .auth-form input:not([type="checkbox"]) {
   min-height: 42px;
   border: 1px solid var(--line);
   padding: 8px 11px;
   background: var(--surface);
   color: var(--ink);
+}
+.auth-form .password-field input {
+  width: 100%;
+  padding-right: 68px;
+}
+.password-toggle {
+  position: absolute;
+  inset: 1px 1px 1px auto;
+  border: 0;
+  padding: 0 11px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
 }
 .auth-form .check-row {
   display: flex;

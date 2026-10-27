@@ -2,11 +2,23 @@
   const signInForm = document.querySelector("#signInForm");
   const createForm = document.querySelector("#createForm");
   const tabs = [...document.querySelectorAll("[data-auth-tab]")];
+  const passwordToggles = [
+    ...createForm.querySelectorAll("[data-password-toggle]"),
+  ];
+
+  function setPasswordVisibility(toggle, visible) {
+    const input = document.getElementById(toggle.getAttribute("aria-controls"));
+    input.type = visible ? "text" : "password";
+    toggle.textContent = visible ? "Hide" : "Show";
+    toggle.setAttribute("aria-label", `${visible ? "Hide" : "Show"} password`);
+    toggle.setAttribute("aria-pressed", String(visible));
+  }
 
   function selectForm(formName) {
     const create = formName === "create";
     signInForm.hidden = create;
     createForm.hidden = !create;
+    passwordToggles.forEach((toggle) => setPasswordVisibility(toggle, false));
     tabs.forEach((tab) => {
       const selected = tab.dataset.authTab === formName;
       tab.classList.toggle("active", selected);
@@ -33,6 +45,13 @@
   tabs.forEach((tab) =>
     tab.addEventListener("click", () => selectForm(tab.dataset.authTab)),
   );
+
+  passwordToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const visible = toggle.getAttribute("aria-pressed") !== "true";
+      setPasswordVisibility(toggle, visible);
+    });
+  });
 
   signInForm.addEventListener("submit", async (event) => {
     event.preventDefault();

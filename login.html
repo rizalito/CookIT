@@ -42,8 +42,20 @@
           <label>Full name<input name="name" autocomplete="name" required minlength="2"></label>
           <label>Email address<input name="email" type="email" autocomplete="email" required></label>
           <label>Username<input name="username" autocomplete="username" required minlength="3"></label>
-          <label>Password<input name="password" type="password" autocomplete="new-password" required minlength="8"></label>
-          <label>Confirm password<input name="confirm" type="password" autocomplete="new-password" required minlength="8"></label>
+          <div class="auth-field">
+            <label for="createPassword">Password</label>
+            <div class="password-field">
+              <input id="createPassword" name="password" type="password" autocomplete="new-password" required minlength="8">
+              <button class="password-toggle" type="button" data-password-toggle aria-controls="createPassword" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="password-field">
+              <input id="confirmPassword" name="confirm" type="password" autocomplete="new-password" required minlength="8">
+              <button class="password-toggle" type="button" data-password-toggle aria-controls="confirmPassword" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+          </div>
           <label class="check-row"><input name="remember" type="checkbox" checked> Keep me signed in on this device</label>
           <p class="auth-error" role="alert"></p>
           <button class="button" type="submit">Create account</button>
