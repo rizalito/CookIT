@@ -1,0 +1,12 @@
+{
+  "name": "cookit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CookIT recipe site with a local SQLite backend",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

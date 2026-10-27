@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search and browse CookIT recipes by dish, ingredient, and category.">
+  <title>Recipes | CookIT</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/recipes.js"></script>
+  <script defer src="js/site.js"></script>
+</head>
+<body data-page="recipes">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap nav"><a class="logo" href="index.html">Cook<span>IT</span></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="recipes.html" aria-current="page">Recipes</a><a href="categories.html">Categories</a><a href="tutorials.html">How to cook</a><a href="favorites.html">Favorites</a><a href="about.html">About</a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to night theme">☾</button><button class="logout-button" data-logout type="button">Log out</button></nav></div></header>
+  <main id="main" class="wrap page"><p class="kicker">The recipe box</p><h1>Find something good.</h1><p class="lead">Search by recipe, ingredient, cuisine, or meal. Pick a dish to see the full cooking steps.</p>
+    <div class="toolbar"><input class="search" id="recipeSearch" type="search" placeholder="Try chicken, pasta, or garlic" aria-label="Search recipes"><label>Sort by <select class="sort-select" id="recipeSort"><option value="popular">Most popular</option><option value="time">Shortest time</option><option value="difficulty">Difficulty</option></select></label></div>
+    <div class="category-list" id="categoryFilters" aria-label="Filter by category"></div>
+    <p class="muted" id="resultCount" aria-live="polite"></p>
+    <div class="recipe-grid" id="recipeGrid" aria-live="polite"></div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-row"><a class="logo" href="index.html">Cook<span>IT</span></a><span><a href="contact.html">Contact</a> · <a href="about.html">About</a></span></div></footer>
+</body>
+</html>

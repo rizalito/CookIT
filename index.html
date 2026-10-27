@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CookIT: approachable recipes and step-by-step cooking guides for everyday meals.">
+  <title>CookIT — Cook something delicious</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/recipes.js"></script>
+  <script defer src="js/site.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html" aria-label="CookIT home">Cook<span>IT</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="categories.html">Categories</a>
+        <a href="tutorials.html">How to cook</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="about.html">About</a>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to night theme">☾</button>
+        <button class="logout-button" data-logout type="button">Log out</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="home-hero wrap" aria-labelledby="heroTitle">
+      <div class="home-hero-copy">
+        <p class="kicker">Fresh ideas for your everyday table</p>
+        <h1 id="heroTitle">Good food, without the fuss.</h1>
+        <p class="lead">Simple recipes, clear steps, and familiar ingredients. Find something tasty to make today.</p>
+        <form class="home-search" id="homeSearch" role="search">
+          <input class="search" id="homeSearchInput" type="search" placeholder="Try chicken, pasta, or garlic" aria-label="Search recipes">
+          <button class="button" type="submit">Search</button>
+        </form>
+        <div class="home-links">
+          <a class="button" href="recipes.html">Browse recipes</a>
+          <a class="button secondary" href="recipe.html?id=adobo">Start cooking</a>
+        </div>
+      </div>
+      <div class="home-hero-image">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=1400&amp;q=90" alt="A home-cooked meal with fresh vegetables">
+      </div>
+    </section>
+    <section class="wrap home-featured" aria-labelledby="featuredTitle">
+      <div class="home-section-head">
+        <div>
+          <p class="kicker">What's cooking</p>
+          <h2 id="featuredTitle">Recipes to fall for</h2>
+          <p class="muted">Reliable favorites for wherever today takes you.</p>
+        </div>
+        <a class="text-link" href="recipes.html">Browse all recipes →</a>
+      </div>
+      <div class="category-list home-categories" aria-label="Browse recipes by category">
+        <a class="category-button" href="recipes.html?category=Breakfast">Breakfast</a>
+        <a class="category-button" href="recipes.html?category=Lunch">Lunch</a>
+        <a class="category-button" href="recipes.html?category=Dinner">Dinner</a>
+        <a class="category-button" href="recipes.html?category=Snacks">Snacks</a>
+        <a class="category-button" href="recipes.html?category=Desserts">Desserts</a>
+      </div>
+      <div class="recipe-grid" id="featuredRecipes" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <a class="logo" href="index.html">Cook<span>IT</span></a>
+      <span><a href="contact.html">Contact</a> · <a href="about.html">About</a></span>
+    </div>
+  </footer>
+</body>
+</html>
