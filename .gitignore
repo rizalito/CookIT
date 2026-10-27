@@ -1,4 +1,6 @@
 node_modules/
+*.zip
+System Volume Information/
 data/*.sqlite
 data/*.sqlite-shm
 data/*.sqlite-wal
